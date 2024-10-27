@@ -1,0 +1,34 @@
+I learned a trick to find the proper divisors of a number.
+Its to sqrt the number, modulo the sqrt then find the factor against the original number.
+
+Example:
+
+n of 36;
+
+sqrt of 36 = 6;
+6 % 6 = 0;
+so 36/6 = 6;
+
+6 % 5 != 0;
+skip;
+
+6 % 4 == 0;
+so 36/4 = 9;
+
+6 % 3 == 0;
+so 36/3 = 12;
+
+6 % 2 == 0;
+so 36/2 = 18;
+
+6 % 1 == 0;
+so 36/1 = 36;
+
+so the proper divisors of 36 are 1, 2, 3, 4, 6, 9, 12, 18, 36.
+
+
+this has a time complexity of O(sqrt(n))
+
+
+to check every number it would have a time complexity of O(n)
+
